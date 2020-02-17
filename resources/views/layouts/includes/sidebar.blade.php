@@ -29,7 +29,7 @@
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="pages/charts/chartjs.html"><i class="fa fa-circle-o"></i> Users</a></li>
+            <li><a href="{{ route('user') }}"><i class="fa fa-circle-o"></i> Users</a></li>
             <li><a href="pages/charts/morris.html"><i class="fa fa-circle-o"></i> Drivers</a></li>
             <li><a href="pages/charts/flot.html"><i class="fa fa-circle-o"></i> Customers</a></li>
           </ul>
