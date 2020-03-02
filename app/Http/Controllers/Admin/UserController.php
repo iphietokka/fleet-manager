@@ -27,7 +27,8 @@ class UserController extends Controller
      */
     public function create()
     {
-        //
+        $roles = Role::all();
+        return view('admin.user.create', compact('roles'));
     }
 
     /**
@@ -38,7 +39,11 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data = new User();
+        $data->name = $request->get('name');
+        $data->email = $request->get('email');
+        $data->role_id = $request->get('role_id');
+        $data->password = bcrypt($request->get('password'));
     }
 
     /**

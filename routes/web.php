@@ -24,6 +24,7 @@ Route::group(['middleware' => ['auth', 'admin'], 'prefix' => 'admin'], function 
     Route::get('/', 'Admin\HomeController@index')->name('admin-home');
 
     Route::get('user', 'Admin\UserController@index')->name('user');
+    Route::post('user/store', 'Admin\UserController@store')->name('user.store');
 });
 
 Route::group(['middleware' => ['auth', 'driver'], 'prefix' => 'driver'], function () {
